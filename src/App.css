@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
+
+body {
+  font-family: "Miriam Libre", serif;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #1F1A1A;
+  background-color: #F5F5F5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+a {
+  color: #E3535C;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.container {
+  max-width: 1200px;
+  padding: 0 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.jumbotron {
+  margin: 0; 
+  padding: 0;
+  margin-top: 8vw;
+  background-color: #F5F5F5;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  padding: 0;
+  margin-left: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link {
+  padding: 0;
+}
+
+.nav-item > .active {
+  font-weight: 700;
+}
+
+.card {
+  background-color: #F5F5F5;
+  border: none;
+}
+
+
+.card-body {
+  padding: 24px 24px 0 0;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  color: #756868;
+}
+
+.heart-icon {
+  width: 15px;
+  padding-bottom: 3px;
+  margin-right: 4px;
+}
+
+.single-wish {
+  margin-top:3vw;
+}
+
+.single-wish-title {
+  font-size: 24px;
 }
