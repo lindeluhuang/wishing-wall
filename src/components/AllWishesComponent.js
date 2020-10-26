@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+import MainHeader from './MainHeaderComponent'
 import WishesList from './WishesListComponent'
 
 function CompareDate(a, b) {
@@ -21,7 +23,10 @@ function AllWishes({ wishes }) {
     let sortedWishes = wishes.sort(CompareDate);
 
     return (
-        <WishesList wishes={sortedWishes} />
+        <React.Fragment>
+            <MainHeader />
+            <WishesList wishes={sortedWishes} />
+        </React.Fragment>
     );
 };
 

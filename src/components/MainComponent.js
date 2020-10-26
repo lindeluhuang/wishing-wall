@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { WISHES } from '../shared/wishes';
-import Header from './HeaderComponent'
 import AllWishes from './AllWishesComponent';
 import TopWishes from './TopWishesComponent';
 import SingleWish from './SingleWishComponent';
@@ -43,7 +42,6 @@ class Main extends Component {
 
         return (
             <div>
-                <Header />
                 <Switch>
                     <Route path='/allwishes' render={() => <AllWishes wishes={this.state.wishes} />} />
                     <Route path='/topwishes' render={() => <TopWishes wishes={this.state.wishes} />} />

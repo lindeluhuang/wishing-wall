@@ -1,4 +1,5 @@
-
+import React, { Component } from 'react';
+import MainHeader from './MainHeaderComponent'
 import WishesList from './WishesListComponent'
 
 
@@ -24,7 +25,10 @@ function TopWishes({ wishes }) {
 
 
     return (
-        <WishesList wishes={sortedWishes} />
+        <React.Fragment>
+            <MainHeader />
+            <WishesList wishes={sortedWishes} />
+        </React.Fragment>
     );
 };
 

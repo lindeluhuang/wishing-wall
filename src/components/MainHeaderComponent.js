@@ -1,8 +1,8 @@
 import React, { Component }  from 'react';
-import { Nav, Navbar, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { Nav, Navbar, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-class Header extends Component {
+class MainHeader extends Component {
 
     constructor(props) {
         super(props);
@@ -49,4 +49,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default MainHeader;

@@ -3,25 +3,45 @@
 
 
 /* ------------------------ General styles ------------------------ */
+:root {
+  --brand-color: #E3535C;
+  --bg-color: #F5F5F5;
+  --text-black-color: #1F1A1A;
+  --text-grey-color: #756868;
+}
+
 body {
   font-family: "Miriam Libre", serif;
   font-size: 18px;
   line-height: 1.8em;
   color: #1F1A1A;
-  background-color: #F5F5F5;
+  background-color: var(--bg-color);
 }
 
 a {
-  color: #E3535C;
+  color: var(--brand-color);
 }
 
 a:hover {
-  color: #E3535C;
+  color: var(--brand-color);
 }
 
 .container {
   max-width: 1200px;
-  padding: 0 24px;
+  padding: 0 30px;
+}
+
+.btn {
+  border: 2px solid var(--brand-color);
+  padding: .8em 1.6em;
+  border-radius: 0;
+  color: var(--brand-color);
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: var(--brand-color);
+  border: 2px solid var(--brand-color);
 }
 
 /* ------------------------ Jumbotron ------------------------ */
@@ -30,10 +50,10 @@ a:hover {
   margin: 0; 
   padding: 0;
   margin-top: 8vw;
-  background-color: #F5F5F5;
+  background-color: var(--bg-color);
 }
 
-/* ------------------------ Navbar ------------------------ */
+/* ------------------------ Main Navbar ------------------------ */
 
 .navbar {
   padding: 0;
@@ -41,7 +61,7 @@ a:hover {
 }
 
 .navbar .container {
-  padding: 0 24px;
+  padding: 0 30px;
 }
 
 .navbar-nav {
@@ -61,15 +81,28 @@ a:hover {
     text-decoration: underline;
 }
 
+
+/* ------------------------ Secondary Navbar ------------------------ */
+
+.secondary-nav-title {
+  margin-left: -24px;
+}
+
+.chevron-left {
+  width: 10px;
+  margin-right: 6px;
+}
+
+
 /* ------------------------ Wish cards in list ------------------------ */
 
 .card {
-  background-color: #F5F5F5;
+  background-color: var(--bg-color);;
   border: none;
 }
 
 .card a {
-  color: #1F1A1A;
+  color: var(--text-black-color);;
 }
 
 .card-body {
@@ -78,7 +111,7 @@ a:hover {
 
 .card-subtitle {
   font-size: 16px;
-  color: #756868;
+  color: var(--text-grey-color);;
 }
 
 /* .card-body > a:hover { */
@@ -125,12 +158,30 @@ a:hover {
   
 }
 
-.single-wish .card-body {
+/* .single-wish .card-body {
   padding: 0 0 0 2em;
   margin-top: 2em;
-  border-left: 3px solid #E3535C;
-}
+  border-left: 3px solid var(--brand-color);
+} */
 
 .single-wish-title {
   font-size: 24px;
 }
+
+/* ------------------------ Shuffle button ------------------------ */
+
+.container-btn-shuffle {
+  background-color: var(--bg-color);
+  padding-bottom: 12vw;
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .container-btn-shuffle {
+    text-align: left;
+  }
+}
+
+/* .btn-see-another {
+  margin-top: 3em;
+} */
