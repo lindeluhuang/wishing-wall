@@ -1,5 +1,8 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap');
 
+
+/* ------------------------ General styles ------------------------ */
 body {
   font-family: "Miriam Libre", serif;
   font-size: 18px;
@@ -8,18 +11,20 @@ body {
   background-color: #F5F5F5;
 }
 
-
-
 a {
   color: #E3535C;
 }
 
-
+a:hover {
+  color: #E3535C;
+}
 
 .container {
   max-width: 1200px;
   padding: 0 24px;
 }
+
+/* ------------------------ Jumbotron ------------------------ */
 
 .jumbotron {
   margin: 0; 
@@ -28,9 +33,19 @@ a {
   background-color: #F5F5F5;
 }
 
+/* ------------------------ Navbar ------------------------ */
+
 .navbar {
   padding: 0;
-  margin-left: 2em;
+  /* margin-left: 2em; */
+}
+
+.navbar .container {
+  padding: 0 24px;
+}
+
+.navbar-nav {
+  margin-left: -.5rem;
 }
 
 .nav-link {
@@ -40,6 +55,13 @@ a {
 .nav-item > .active {
   font-weight: 700;
 }
+
+.nav-item:hover {
+  /* font-weight: 700; */
+    text-decoration: underline;
+}
+
+/* ------------------------ Wish cards in list ------------------------ */
 
 .card {
   background-color: #F5F5F5;
@@ -59,10 +81,36 @@ a {
   color: #756868;
 }
 
-a:hover {
-  text-decoration: none;
-  font-weight: 700;
+/* .card-body > a:hover { */
+  /* text-decoration: none; */
+  /* font-weight: 700; */
+/* } */
+
+
+@media (min-width: 34em) {
+  .card-columns {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+  }
 }
+
+@media (min-width: 48em) {
+  .card-columns {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+  }
+}
+
+@media (min-width: 62em) {
+  .card-columns {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+  }
+}
+
 
 .heart-icon {
   width: 15px;
@@ -70,8 +118,17 @@ a:hover {
   margin-right: 4px;
 }
 
+/* ------------------------ Single wish cards ------------------------ */
+
 .single-wish {
   line-height: 3em;
+  
+}
+
+.single-wish .card-body {
+  padding: 0 0 0 2em;
+  margin-top: 2em;
+  border-left: 3px solid #E3535C;
 }
 
 .single-wish-title {
