@@ -1,6 +1,5 @@
 import React, { Component }  from 'react';
-import { Nav, Navbar, NavItem, Jumbotron } from 'reactstrap';
-import { ChevronLeftIcon } from '@modulz/radix-icons'
+import { Jumbotron } from 'reactstrap';
 
 
 class SecondaryHeader extends Component {

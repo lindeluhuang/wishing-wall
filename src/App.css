@@ -172,7 +172,8 @@ a:hover {
 
 .container-btn-shuffle {
   background-color: var(--bg-color);
-  padding-bottom: 12vw;
+  padding-top: 1em;
+  padding-bottom: 10vw;
   text-align: center;
 }
 
@@ -182,6 +183,21 @@ a:hover {
   }
 }
 
-/* .btn-see-another {
-  margin-top: 3em;
-} */
+
+
+/* ------------------------ Make wish button ------------------------ */
+
+.container-btn-make-wish {
+  background-color: var(--bg-color);
+  padding-top: 1em;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .container-btn-make-wish {
+    text-align: left;
+    padding-top: 2em;
+    padding-bottom: 4em;
+  }
+}

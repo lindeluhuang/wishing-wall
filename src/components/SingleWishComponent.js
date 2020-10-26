@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SecondaryHeader from './SecondaryHeaderComponent'
 import ShuffleButton from './ShuffleButtonComponent'
 import {
     Card, CardBody,
-    CardTitle, CardSubtitle, Button
+    CardTitle, CardSubtitle
 } from 'reactstrap';
 
 
