@@ -27,7 +27,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 62em;
   padding: 0 30px;
 }
 
@@ -85,14 +85,27 @@ a:hover {
 /* ------------------------ Secondary Navbar ------------------------ */
 
 .secondary-nav-title {
-  margin-left: -24px;
+  text-align: center;
+}
+
+@media (min-width: 72em) {
+  .secondary-nav-title {
+    margin-left: -90px;
+    text-align: left;
+  }
 }
 
 .chevron-left {
-  width: 10px;
-  margin-right: 6px;
+  width: 11px;
+  margin-top: 6px;
+  /* margin-right: 6px; */
 }
 
+@media (min-width: 72em) {
+  .chevron-left {
+    margin-left: -32px;
+  }
+}
 
 /* ------------------------ Wish cards in list ------------------------ */
 
@@ -177,7 +190,7 @@ a:hover {
   text-align: center;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 62em) {
   .container-btn-shuffle {
     text-align: left;
   }
@@ -200,4 +213,12 @@ a:hover {
     padding-top: 2em;
     padding-bottom: 4em;
   }
+}
+
+
+
+/* ------------------------ Make a Wish page ------------------------ */
+
+.btn-release-wish {
+  margin-top: 2em;
 }

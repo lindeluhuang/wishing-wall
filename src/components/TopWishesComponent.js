@@ -1,7 +1,7 @@
 import React from 'react';
-import MainHeader from './MainHeaderComponent'
+import PrimaryHeader from './PrimaryHeaderComponent'
 import WishesList from './WishesListComponent'
-import MakeWish from './MakeWishComponent'
+import ButtonWish from './ButtonWishComponent'
 
 
 function CompareHearts(a, b) {
@@ -14,8 +14,6 @@ function CompareHearts(a, b) {
     } else if (thingA < thingB) {
         comparison = 1;
     }
-    console.log("Comparison: ");
-    console.log(comparison);
     return comparison;
 }
 
@@ -27,9 +25,9 @@ function TopWishes({ wishes }) {
 
     return (
         <React.Fragment>
-            <MainHeader />
+            <PrimaryHeader />
             <WishesList wishes={sortedWishes} />
-            <MakeWish />
+            <ButtonWish />
         </React.Fragment>
     );
 };

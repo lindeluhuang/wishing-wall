@@ -4,6 +4,7 @@ import AllWishes from './AllWishesComponent';
 import TopWishes from './TopWishesComponent';
 import ShuffledWishes from './ShuffledWishesComponent';
 import SingleWish from './SingleWishComponent';
+import MakeAWish from './MakeAWishComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 
@@ -17,29 +18,23 @@ class Main extends Component {
     }
 
     render() {
-
-        // const wishesCount = this.state.wishes.filter(wish => wish).length;
-
-        // function SurpriseMe({ wishes }) {
-        //     let randNum = Math.floor(Math.random() * wishesCount);
-
+        
+        // const wishWithId = ({match}) => {
         //     return (
         //         <SingleWish 
-        //             wish={wishes.filter(wish => wish.id === randNum)[0]}
+        //             wish={this.state.wishes.filter(wish => wish.id === +match.params.wishId)[0]
         //         />
-
         //     );
-            
-        // }
-        
-        
+        // };
+
         const wishWithId = ({match}) => {
             return (
                 <SingleWish 
-                    wish={this.state.wishes.filter(wish => wish.id === +match.params.wishId)[0]}
+                    wish={this.state.wishes.filter(wish => wish.id === +match.params.wishId)[0]} wishes = {this.state.wishes}
                 />
             );
         };
+
 
         return (
             <div>
@@ -48,6 +43,7 @@ class Main extends Component {
                     <Route path='/topwishes' render={() => <TopWishes wishes={this.state.wishes} />} />
                     <Route path='/shuffledwishes' render={() => <ShuffledWishes wishes={this.state.wishes} />} />
                     <Route path='/wish/:wishId' component={wishWithId} />
+                    <Route path='/makeawish' render={() => <MakeAWish />} />
                     <Redirect to='/allwishes' render={() => <AllWishes wishes={this.state.wishes} />} />
                 </Switch>
             </div>

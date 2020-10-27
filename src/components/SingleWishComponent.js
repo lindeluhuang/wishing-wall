@@ -1,25 +1,26 @@
 import React from 'react';
 import SecondaryHeader from './SecondaryHeaderComponent'
-import ShuffleButton from './ShuffleButtonComponent'
+import ButtonShuffle from './ButtonShuffleComponent'
 import {
     Card, CardBody,
     CardTitle, CardSubtitle
 } from 'reactstrap';
 
 
-function SingleWish({ wish }) {
+function SingleWish(props) {
     return (
+
         <React.Fragment>
-            <SecondaryHeader />
+            <SecondaryHeader title="A single wish" />
             <div className="container single-wish">
                 <Card>
                     <CardBody>
-                        <CardTitle className="single-wish-title">{wish.content}</CardTitle>
-                        <CardSubtitle><img src="/assets/images/Heart.png" class="heart-icon" /> {wish.hearts} hearts • {wish.datedisplay}</CardSubtitle>
+                        <CardTitle className="single-wish-title">{props.wish.content}</CardTitle>
+                        <CardSubtitle><img src="/assets/images/Heart.png" class="heart-icon" /> {props.wish.hearts} hearts • {props.wish.datedisplay}</CardSubtitle>
                     </CardBody>
                 </Card>
             </div>
-            <ShuffleButton />
+            <ButtonShuffle wishes={props.wishes} currentWish={props.wish}/>
         </React.Fragment>
     );
 }

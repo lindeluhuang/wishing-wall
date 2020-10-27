@@ -1,5 +1,7 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import { Jumbotron } from 'reactstrap';
+// import { useHistory } from "react-router-dom";
+// import { withRouter } from 'react-router-dom'
 
 
 class SecondaryHeader extends Component {
@@ -9,18 +11,36 @@ class SecondaryHeader extends Component {
     }
 
     render() {
+
+        // const Item = () => {
+        //     let history = useHistory();
+        //     return (
+        //         <>
+        //           <img src="/assets/images/Chevron-Left.png" class="chevron-left" onClick={() => history.goBack()} />
+        //         </>
+        //     );
+        // };
+
+        // let history = useHistory();
+
+        // const BrowserHistory = require('react-router/lib/BrowserHistory').default;
+
+
         return (
-            <React.Fragment>
-                <Jumbotron fluid>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col">
-                            <h2 className="text-left secondary-nav-title"><img src="/assets/images/Chevron-Left.png" class="chevron-left" /> A single wish</h2>
-                            </div>
+            <Jumbotron fluid>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-1">
+                            <img src="/assets/images/Chevron-Left.png" class="chevron-left" />
+                            {/* <img src="/assets/images/Chevron-Left.png" class="chevron-left" onClick={() => history.goBack()} /> */}
+                        </div>
+                        <div className="col-10 secondary-nav-title">
+                            {/* <h2>Titlehere!</h2> */}
+                            <h2>{this.props.title}</h2>
                         </div>
                     </div>
-                </Jumbotron>
-            </React.Fragment>
+                </div>
+            </Jumbotron>
         );
     }
 }
