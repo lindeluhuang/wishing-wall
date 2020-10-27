@@ -37,8 +37,8 @@ class MainHeader extends Component {
                                 </NavItem>
                                 <span>•</span>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/surpriseme">
-                                        Surprise me
+                                    <NavLink className="nav-link" to="/shuffledwishes">
+                                        Shuffled wishes
                                     </NavLink>
                                 </NavItem>
                             </Nav>

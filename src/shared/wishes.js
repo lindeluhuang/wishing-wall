@@ -8,7 +8,7 @@ export const WISHES = [
     },
     {
         id: 1,
-        content: "I wish for more sunshine.",
+        content: "I wish for more of this great thing.",
         hearts: 73,
         datedisplay: "Oct '20",
         datetime: 2010
@@ -16,7 +16,7 @@ export const WISHES = [
 
     {
         id: 2,
-        content: "I wish the dreams in my head would come true in real life so I could take a moment to really live and breathe and play and enjoy life and art and all the good things this wonderful world has to offer, if only if only if only.",
+        content: "I wish this thing I wanted was something that would make this thing the best thing, the greatest thing, so that I could know I have this wonderful great thing that could never be taken away.",
         hearts: 136,
         datedisplay: "Apr '20",
         datetime: 2004
@@ -30,7 +30,7 @@ export const WISHES = [
     },
     {
         id: 4,
-        content: "I wish that the things that I fear would go poof and get soaked into the energy of the sun.",
+        content: "I wish that I could do this thing and that thing and all those amazing wow things.",
         hearts: 573,
         datedisplay: "Aug '20",
         datetime: 2008
