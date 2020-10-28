@@ -101,6 +101,10 @@ a:hover {
   /* margin-right: 6px; */
 }
 
+.chevron-left:hover {
+    cursor:pointer;
+}
+
 @media (min-width: 72em) {
   .chevron-left {
     margin-left: -32px;

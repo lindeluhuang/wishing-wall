@@ -1,6 +1,6 @@
 import React from 'react';
 import SecondaryHeader from './SecondaryHeaderComponent'
-import ButtonShuffle from './ButtonShuffleComponent'
+import { useHistory } from 'react-router-dom';
 import {
     Card, CardBody,
     CardTitle, CardSubtitle
@@ -11,7 +11,7 @@ function SingleWish(props) {
     return (
 
         <React.Fragment>
-            <SecondaryHeader title="A single wish" />
+            <SecondaryHeader title="A single wish" history={useHistory()}/>
             <div className="container single-wish">
                 <Card>
                     <CardBody>
@@ -20,7 +20,6 @@ function SingleWish(props) {
                     </CardBody>
                 </Card>
             </div>
-            <ButtonShuffle wishes={props.wishes} currentWish={props.wish}/>
         </React.Fragment>
     );
 }

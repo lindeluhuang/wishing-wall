@@ -1,16 +1,16 @@
 import React from 'react';
 import SecondaryHeader from './SecondaryHeaderComponent'
-import ButtonShuffle from './ButtonShuffleComponent'
+import { useHistory } from 'react-router-dom';
 import {
     Card, CardBody,
-    CardTitle, CardSubtitle, Button
+    CardTitle, Button
 } from 'reactstrap';
 
 
 function MakeAWish() {
     return (
         <React.Fragment>
-            <SecondaryHeader title="Make a wish"/>
+            <SecondaryHeader title="Make a wish" history={useHistory()}/>
             <div className="container single-wish">
                 <Card>
                     <CardBody>
