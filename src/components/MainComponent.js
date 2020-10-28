@@ -18,14 +18,6 @@ class Main extends Component {
     }
 
     render() {
-        
-        // const wishWithId = ({match}) => {
-        //     return (
-        //         <SingleWish 
-        //             wish={this.state.wishes.filter(wish => wish.id === +match.params.wishId)[0]
-        //         />
-        //     );
-        // };
 
         const wishWithId = ({match}) => {
             return (

@@ -44,6 +44,19 @@ a:hover {
   border: 2px solid var(--brand-color);
 }
 
+.btn:focus {
+  box-shadow: none;
+}
+
+
+textarea {
+  resize: none;
+}
+
+textarea:focus {
+  box-shadow: none;
+}
+
 /* ------------------------ Jumbotron ------------------------ */
 
 .jumbotron {
@@ -225,4 +238,12 @@ a:hover {
 
 .btn-release-wish {
   margin-top: 2em;
+}
+
+#wish {
+  background-color: var(--bg-color);
+  border: none;
+  margin-top: 3em;
+  height: 4em;
+  padding: 0;
 }
