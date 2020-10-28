@@ -25,8 +25,8 @@ class WriteWish extends Component {
         };
 
         if (this.state.touched.wish) {
-            if (wish.length < 8) {
-                errors.wish = 'Ah, the beauty of wishes...';
+            if (wish.length < 10) {
+                errors.wish = 'Write just a bit more to fully realize your wish.';
             }
         }
 
