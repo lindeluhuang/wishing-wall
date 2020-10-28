@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {
-    Breadcrumb, BreadcrumbItem,
-    Button, Form, FormGroup, Label, Input, Col, FormFeedback
+    Button, Form, FormGroup, Input, Col, FormFeedback
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
 
 class WriteWish extends Component {
     constructor(props) {
@@ -11,17 +9,41 @@ class WriteWish extends Component {
 
         this.state = {
             wish: '',
+            touched: {
+                wish: false
+            }
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    validate(wish) {
+
+        const errors = {
+            wish: ''
+        };
+
+        if (this.state.touched.wish) {
+            if (wish.length < 8) {
+                errors.wish = 'Surely your wish is longer than that!';
+            }
+        }
+
+        return errors;
+    }
+
+    handleBlur = (field) => () => {
+        this.setState({
+            touched: { ...this.state.touched, [field]: true }
+        });
+    }
+
     handleInputChange(event) {
         const target = event.target;
         const name = target.name;
         const value = target.value;
-    
+
         this.setState({
             [name]: value
         });
@@ -35,7 +57,8 @@ class WriteWish extends Component {
 
     render() {
 
-        
+        const errors = this.validate(this.state.wish);
+
         return (
             <div className="row row-content">
                 <div className="col">
@@ -43,10 +66,13 @@ class WriteWish extends Component {
                         <FormGroup row>
                             <Col>
                                 <Input type="textarea" id="wish" name="wish"
-                                placeholder="I wish..."
                                     rows="12"
+                                    placeholder="I wish..."
                                     value={this.state.wish}
-                                    onChange={this.handleInputChange}></Input>
+                                    invalid={errors.wish}
+                                    onBlur={this.handleBlur("wish")}
+                                    onChange={this.handleInputChange} />
+                                <FormFeedback>{errors.wish}</FormFeedback>
                             </Col>
                         </FormGroup>
                         <FormGroup row>

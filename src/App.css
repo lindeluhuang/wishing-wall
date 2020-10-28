@@ -55,6 +55,7 @@ textarea {
 
 textarea:focus {
   box-shadow: none;
+  outline: none;
 }
 
 /* ------------------------ Jumbotron ------------------------ */
