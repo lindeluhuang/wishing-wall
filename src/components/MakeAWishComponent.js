@@ -13,7 +13,7 @@ function MakeAWish({ setNewWish }) {
         <React.Fragment>
             <SecondaryHeader title="Make a wish" history={useHistory()} />
             <div className="container single-wish">
-                <WriteWish setNewWish={setNewWish} />
+                <WriteWish setNewWish={setNewWish} history={useHistory()}/>
             </div>
         </React.Fragment>
     );

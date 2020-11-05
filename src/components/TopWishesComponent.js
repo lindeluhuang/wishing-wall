@@ -19,8 +19,10 @@ function CompareHearts(a, b) {
 
 function TopWishes({ wishes }) {
 
-    const filteredWishes = wishes.filter(wish => wish.hearts > 50);
-    let sortedWishes = filteredWishes.sort(CompareHearts);
+    // const filteredWishes = wishes.filter(wish => wish.hearts > 50);
+    // let sortedWishes = filteredWishes.sort(CompareHearts);
+
+    let sortedWishes = wishes.sort(CompareHearts);
 
 
     return (

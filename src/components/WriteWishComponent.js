@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
     Button, Form, FormGroup, Input, Col, FormFeedback
 } from 'reactstrap';
+import { Redirect } from 'react-router-dom';
 
 class WriteWish extends Component {
     constructor(props) {
@@ -50,16 +51,31 @@ class WriteWish extends Component {
     }
 
     handleSubmit(event) {
-        alert('Current state is: ' + JSON.stringify(this.state));
+        // alert('Current state is: ' + JSON.stringify(this.state));
         const newWishObj = {
             id: Math.floor(Math.random() * Math.floor(99999)),
             content: this.state.wish,
-            datedisplay: "Jun '20",
-            datetime: 2006,
+            datedisplay: this.setDateDisplay(),
+            datetime: this.setDateTime(),
             hearts: 0
         }
         this.props.setNewWish(newWishObj);
         event.preventDefault();
+        this.props.history.goBack()
+
+    }
+
+    setDateTime() {
+        var d = new Date();
+        return d;
+    }
+
+    setDateDisplay() {
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        var d = new Date();
+        var month = months[d.getMonth()];
+        var year = d.getFullYear().toString().substr(-2);
+        return (month + ' `' + year)
     }
 
     render() {
