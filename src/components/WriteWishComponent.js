@@ -59,9 +59,12 @@ class WriteWish extends Component {
             datetime: this.setDateTime(),
             hearts: 0
         }
-        this.props.setNewWish(newWishObj);
         event.preventDefault();
+
+        if (!this.validate(this.state.wish).wish) {
+        this.props.setNewWish(newWishObj);
         this.props.history.goBack()
+    }
 
     }
 

@@ -246,7 +246,7 @@ textarea:focus {
   background-color: var(--bg-color);
   border: none;
   margin-top: 1em;
-  height: 4em;
+  height: 2em;
   padding: 0;
   font-size: 24px;
   color: var(--text-black-color);
