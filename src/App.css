@@ -180,6 +180,7 @@ textarea:focus {
   width: 15px;
   padding-bottom: 3px;
   margin-right: 4px;
+  cursor: pointer;
 }
 
 /* ------------------------ Single wish cards ------------------------ */

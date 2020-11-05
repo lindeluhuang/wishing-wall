@@ -6,25 +6,38 @@ import {
 import { Link } from 'react-router-dom';
 
 
-function RenderWishItem({ wish }) {
+function RenderWishItem({ wish, addHeart }) {
+
+    function handleClick(e) {
+        e.preventDefault();
+        wish.hearts++;
+        addHeart(wish)
+      }
+
     return (
         <Card className="wishItem">
             <CardBody>
                 <Link to={`/wish/${wish.id}`}>
                     <CardTitle>{wish.content}</CardTitle>
                 </Link>
-                <CardSubtitle><img src="/assets/images/Heart.png" class="heart-icon" /> {wish.hearts} hearts • {wish.datedisplay}</CardSubtitle>
+                <CardSubtitle><img
+                    src="/assets/images/Heart.png"
+                    class="heart-icon"
+                    onClick={handleClick}
+                />
+                    {wish.hearts} hearts • {wish.datedisplay}</CardSubtitle>
             </CardBody>
         </Card>
     );
 }
 
-function WishesList({ wishes }) {
 
-    const getWishes = wishes.map(wish => {
+function WishesList({ wishes, addHeart }) {
+
+    const getWishes = wishes.map( wish => {
         return (
             <div key={wish.id} >
-                <RenderWishItem wish={wish} />
+                <RenderWishItem wish={wish} addHeart={addHeart}/>
             </div>
         );
     });

@@ -17,14 +17,14 @@ function CompareDate(a, b) {
 }
 
 
-function AllWishes({ wishes }) {
+function AllWishes({ wishes, addHeart }) {
 
     let sortedWishes = wishes.sort(CompareDate);
 
     return (
         <React.Fragment>
             <PrimaryHeader />
-            <WishesList wishes={sortedWishes} />
+            <WishesList wishes={sortedWishes} addHeart={addHeart} />
             <ButtonWish />
         </React.Fragment>
     );
