@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/wishing-wall/static/css/main.0625cd88.chunk.css",
+    "main.js": "/wishing-wall/static/js/main.d0d6fde6.chunk.js",
+    "main.js.map": "/wishing-wall/static/js/main.d0d6fde6.chunk.js.map",
+    "runtime-main.js": "/wishing-wall/static/js/runtime-main.6df21bfa.js",
+    "runtime-main.js.map": "/wishing-wall/static/js/runtime-main.6df21bfa.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/wishing-wall/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.4ca8441a.chunk.js": "/wishing-wall/static/js/2.4ca8441a.chunk.js",
+    "static/js/2.4ca8441a.chunk.js.map": "/wishing-wall/static/js/2.4ca8441a.chunk.js.map",
+    "static/js/3.0462414a.chunk.js": "/wishing-wall/static/js/3.0462414a.chunk.js",
+    "static/js/3.0462414a.chunk.js.map": "/wishing-wall/static/js/3.0462414a.chunk.js.map",
+    "index.html": "/wishing-wall/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/wishing-wall/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.0625cd88.chunk.css.map": "/wishing-wall/static/css/main.0625cd88.chunk.css.map",
+    "static/js/2.4ca8441a.chunk.js.LICENSE.txt": "/wishing-wall/static/js/2.4ca8441a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6df21bfa.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.4ca8441a.chunk.js",
+    "static/css/main.0625cd88.chunk.css",
+    "static/js/main.d0d6fde6.chunk.js"
+  ]
+}
