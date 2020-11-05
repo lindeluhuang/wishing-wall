@@ -8,15 +8,25 @@ import {
 
 
 function SingleWish(props) {
-    return (
 
+    function handleClick(e) {
+        e.preventDefault();
+        props.wish.hearts++;
+        props.addHeart(props.wish)
+      }
+
+    return (
         <React.Fragment>
-            <SecondaryHeader title="A single wish" history={useHistory()}/>
+            <SecondaryHeader title="A single wish" history={useHistory()} />
             <div className="container single-wish">
                 <Card>
                     <CardBody>
                         <CardTitle className="single-wish-title">{props.wish.content}</CardTitle>
-                        <CardSubtitle><img src="/assets/images/Heart.png" class="heart-icon" /> {props.wish.hearts} hearts • {props.wish.datedisplay}</CardSubtitle>
+                        <CardSubtitle><img
+                            src="/assets/images/Heart.png"
+                            class="heart-icon"
+                            onClick={handleClick}
+                        /> {props.wish.hearts} hearts • {props.wish.datedisplay}</CardSubtitle>
                     </CardBody>
                 </Card>
             </div>

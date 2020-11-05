@@ -33,7 +33,9 @@ class Main extends Component {
         const wishWithId = ({ match }) => {
             return (
                 <SingleWish
-                    wish={this.state.wishes.filter(wish => wish.id === +match.params.wishId)[0]} wishes={this.state.wishes}
+                    wish={this.state.wishes.filter(wish => wish.id === +match.params.wishId)[0]} 
+                    wishes={this.state.wishes} 
+                    addHeart={this.addHeart} 
                 />
             );
         };
