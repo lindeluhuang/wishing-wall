@@ -50,8 +50,15 @@ class WriteWish extends Component {
     }
 
     handleSubmit(event) {
-        console.log('Current state is: ' + JSON.stringify(this.state));
         alert('Current state is: ' + JSON.stringify(this.state));
+        const newWishObj = {
+            id: Math.floor(Math.random() * Math.floor(99999)),
+            content: this.state.wish,
+            datedisplay: "Jun '20",
+            datetime: 2006,
+            hearts: 0
+        }
+        this.props.setNewWish(newWishObj);
         event.preventDefault();
     }
 

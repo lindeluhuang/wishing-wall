@@ -14,7 +14,13 @@ class Main extends Component {
         super(props);
         this.state = {
             wishes: WISHES,
+            newWish: ''
         };
+    }
+
+    setNewWish = (newVal) => {
+        console.log(newVal);
+        this.setState({wishes: [...this.state.wishes, newVal]})
     }
 
     render() {
@@ -35,7 +41,7 @@ class Main extends Component {
                     <Route path='/topwishes' render={() => <TopWishes wishes={this.state.wishes} />} />
                     <Route path='/shuffledwishes' render={() => <ShuffledWishes wishes={this.state.wishes} />} />
                     <Route path='/wish/:wishId' component={wishWithId} />
-                    <Route path='/makeawish' render={() => <MakeAWish />} />
+                    <Route path='/makeawish' render={() => <MakeAWish setNewWish={this.setNewWish} />} />
                     <Redirect to='/allwishes' render={() => <AllWishes wishes={this.state.wishes} />} />
                 </Switch>
             </div>
