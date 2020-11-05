@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'reactstrap';
-
+import chevronLeft from '../images/Chevron-Left.png';
 
 class SecondaryHeader extends Component {
 
@@ -16,7 +16,7 @@ class SecondaryHeader extends Component {
                     <div className="row">
                         <div className="col-1">
                             {/* <img src="/assets/images/Chevron-Left.png" class="chevron-left" /> */}
-                            <img src="/assets/images/Chevron-Left.png" class="chevron-left" onClick={() => this.props.history.goBack()} />
+                            <img src={chevronLeft} class="chevron-left" onClick={() => this.props.history.goBack()} />
                         </div>
                         <div className="col-10 secondary-nav-title">
                             {/* <h2>Titlehere!</h2> */}

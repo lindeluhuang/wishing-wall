@@ -4,6 +4,7 @@ import {
     CardTitle, CardSubtitle
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import heartIcon from '../images/Heart.png';
 
 
 function RenderWishItem({ wish, addHeart }) {
@@ -21,7 +22,7 @@ function RenderWishItem({ wish, addHeart }) {
                     <CardTitle>{wish.content}</CardTitle>
                 </Link>
                 <CardSubtitle><img
-                    src="/assets/images/Heart.png"
+                    src={heartIcon}
                     class="heart-icon"
                     onClick={handleClick}
                 />

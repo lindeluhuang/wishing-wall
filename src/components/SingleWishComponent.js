@@ -5,6 +5,7 @@ import {
     Card, CardBody,
     CardTitle, CardSubtitle
 } from 'reactstrap';
+import heartIcon from '../images/Heart.png';
 
 
 function SingleWish(props) {
@@ -23,7 +24,7 @@ function SingleWish(props) {
                     <CardBody>
                         <CardTitle className="single-wish-title">{props.wish.content}</CardTitle>
                         <CardSubtitle><img
-                            src="/assets/images/Heart.png"
+                            src={heartIcon}
                             class="heart-icon"
                             onClick={handleClick}
                         /> {props.wish.hearts} hearts • {props.wish.datedisplay}</CardSubtitle>
