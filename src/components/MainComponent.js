@@ -37,6 +37,7 @@ class Main extends Component {
                 <SingleWish
                     wish={this.props.wishes.filter(wish => wish.id === +match.params.wishId)[0]} 
                     wishes={this.props.wishes} 
+                    hearts={this.props.hearts}
                     
                 />
             );

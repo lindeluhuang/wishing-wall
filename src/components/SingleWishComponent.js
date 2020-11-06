@@ -15,6 +15,8 @@ function SingleWish(props) {
         props.wish.hearts++;
       }
 
+      let heartsToDisplay = props.hearts.filter(heartval => heartval.wishid === props.wish.id)[0].heartsval;
+
     return (
         <React.Fragment>
             <SecondaryHeader title="A single wish" history={useHistory()} />
@@ -26,7 +28,7 @@ function SingleWish(props) {
                             src={heartIcon}
                             class="heart-icon"
                             onClick={handleClick}
-                        /> {props.wish.hearts} hearts • {props.wish.datedisplay}</CardSubtitle>
+                        />{heartsToDisplay} hearts • {props.wish.datedisplay}</CardSubtitle>
                     </CardBody>
                 </Card>
             </div>

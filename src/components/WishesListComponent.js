@@ -15,8 +15,7 @@ function RenderWishItem({ wish, hearts }) {
 
     }
 
-    let initialVal = hearts.filter(heartval => heartval.wishid === wish.id);
-    let heartsToDisplay = initialVal[0].heartsval;
+    let heartsToDisplay = hearts.filter(heartval => heartval.wishid === wish.id)[0].heartsval;
 
 
     return (
