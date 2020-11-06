@@ -6,7 +6,7 @@ import {
     CardTitle, CardSubtitle
 } from 'reactstrap';
 import heartIcon from '../images/Heart.png';
-import { Slide } from "react-awesome-reveal";
+import { Slide, Fade } from "react-awesome-reveal";
 
 
 function SingleWish(props) {
@@ -20,7 +20,8 @@ function SingleWish(props) {
 
     return (
         <React.Fragment>
-            <Slide triggerOnce direction="down">
+            {/* <Slide triggerOnce direction="down"> */}
+            <Fade triggerOnce>
             <SecondaryHeader title="A single wish" history={useHistory()} />
             <div className="container single-wish">
                 <Card>
@@ -34,7 +35,8 @@ function SingleWish(props) {
                     </CardBody>
                 </Card>
             </div>
-            </Slide>
+            </Fade>
+            {/* </Slide> */}
         </React.Fragment>
     );
 }
