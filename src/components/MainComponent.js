@@ -6,7 +6,7 @@ import SingleWish from './SingleWishComponent';
 import MakeAWish from './MakeAWishComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addWish, addHearts, plusHeart } from '../redux/ActionCreators';
+import { addWish, addHeart, plusHeart } from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
     return {
@@ -42,7 +42,7 @@ class Main extends Component {
                     <Route path='/topwishes' render={() => <TopWishes wishes={this.props.wishes} hearts={this.props.hearts} plusHeart={this.props.plusHeart} />} />
                     <Route path='/shuffledwishes' render={() => <ShuffledWishes wishes={this.props.wishes} hearts={this.props.hearts} plusHeart={this.props.plusHeart} />} />
                     <Route path='/wish/:wishId' component={wishWithId} />
-                    <Route path='/makeawish' render={() => <MakeAWish setNewWish={this.setNewWish} addWish={this.props.addWish}/>} />
+                    <Route path='/makeawish' render={() => <MakeAWish setNewWish={this.setNewWish} addWish={this.props.addWish} />} />
                     <Redirect to='/allwishes' render={() => <AllWishes wishes={this.props.wishes} hearts={this.props.hearts} plusHeart={this.props.plusHeart} />} />
                 </Switch>
             </div>
