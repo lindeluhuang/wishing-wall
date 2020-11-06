@@ -39,7 +39,7 @@ function WishesList({ wishes, hearts, plusHeart }) {
     const getWishes = wishes.map(wish => {
         return (
             <div key={wish.id} >
-                <Fade cascade>
+                <Fade >
                 <RenderWishItem wish={wish} hearts={hearts} plusHeart={plusHeart} />
                 </Fade>
             </div>
