@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 
 function ButtonWish({ wish }) {
     return (
-        <div className="container fixed-bottom container-btn-make-wish">
+        <div className="fixed-bottom container-btn-make-wish">
+            <div className="container">
             <Link to={'/makeawish'}>
                 <Button outline>Make a Wish</Button>
             </Link>
-
+            </div>
         </div>
 
     );

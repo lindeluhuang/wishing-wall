@@ -4,11 +4,18 @@
 
 /* ------------------------ General styles ------------------------ */
 :root {
-  --brand-color: #E3535C;
-  --bg-color: #F5F5F5;
+  --brand-color: #d7464f;
+  --bg-color: #f0f0f0;
   --text-black-color: #1F1A1A;
   --text-grey-color: #756868;
 }
+
+body {
+  background-image: url("./images/Background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ }
 
 body {
   font-family: "Miriam Libre", serif;
@@ -64,7 +71,7 @@ textarea:focus {
   margin: 0; 
   padding: 0;
   margin-top: 8vw;
-  background-color: var(--bg-color);
+  background-color: transparent;
 }
 
 /* ------------------------ Main Navbar ------------------------ */
@@ -128,7 +135,7 @@ textarea:focus {
 /* ------------------------ Wish cards in list ------------------------ */
 
 .card {
-  background-color: var(--bg-color);;
+  background-color: transparent;
   border: none;
 }
 
@@ -243,7 +250,7 @@ textarea:focus {
 }
 
 #wish {
-  background-color: var(--bg-color);
+  background-color: transparent;
   border: none;
   margin-top: 1em;
   height: 2em;
