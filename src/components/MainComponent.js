@@ -9,7 +9,8 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
     return {
-        wishes: state.wishes
+        wishes: state.wishes,
+        hearts: state.hearts
     };
 };
 
@@ -45,12 +46,12 @@ class Main extends Component {
         return (
             <div>
                 <Switch>
-                    <Route path='/allwishes' render={() => <AllWishes wishes={this.props.wishes}  />} />
-                    <Route path='/topwishes' render={() => <TopWishes wishes={this.props.wishes}  />} />
-                    <Route path='/shuffledwishes' render={() => <ShuffledWishes wishes={this.props.wishes}  />} />
+                    <Route path='/allwishes' render={() => <AllWishes wishes={this.props.wishes} hearts={this.props.hearts} />} />
+                    <Route path='/topwishes' render={() => <TopWishes wishes={this.props.wishes} hearts={this.props.hearts} />} />
+                    <Route path='/shuffledwishes' render={() => <ShuffledWishes wishes={this.props.wishes} hearts={this.props.hearts} />} />
                     <Route path='/wish/:wishId' component={wishWithId} />
                     <Route path='/makeawish' render={() => <MakeAWish setNewWish={this.setNewWish} />} />
-                    <Redirect to='/allwishes' render={() => <AllWishes wishes={this.props.wishes}  />} />
+                    <Redirect to='/allwishes' render={() => <AllWishes wishes={this.props.wishes} hearts={this.props.hearts} />} />
                 </Switch>
             </div>
         );

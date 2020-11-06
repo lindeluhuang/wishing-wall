@@ -186,7 +186,7 @@ textarea:focus {
 .heart-icon {
   width: 15px;
   padding-bottom: 3px;
-  margin-right: 4px;
+  margin-right: 6px;
   cursor: pointer;
 }
 
@@ -237,7 +237,7 @@ textarea:focus {
   .container-btn-make-wish {
     text-align: left;
     padding-top: 2em;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
   }
 }
 
