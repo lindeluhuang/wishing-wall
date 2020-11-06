@@ -39,7 +39,6 @@ function WishesList({ wishes, hearts, plusHeart }) {
         return (
             <div key={wish.id} >
                 <RenderWishItem wish={wish} hearts={hearts} plusHeart={plusHeart} />
-                {/* <RenderWishItem wish={wish} heartsval={hearts.filter(heartval => heartval.wishid === wish.id)} /> */}
             </div>
         );
     });

@@ -2,10 +2,6 @@ import React from 'react';
 import SecondaryHeader from './SecondaryHeaderComponent'
 import { useHistory } from 'react-router-dom';
 import WriteWish from './WriteWishComponent'
-import {
-    Card, CardBody,
-    CardTitle, Button
-} from 'reactstrap';
 
 
 function MakeAWish({ setNewWish, addWish }) {

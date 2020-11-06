@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function ButtonWish({ wish }) {
+function ButtonWish() {
     return (
         <div className="fixed-bottom container-btn-make-wish">
             <div className="container">

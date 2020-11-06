@@ -3,13 +3,6 @@ import * as ActionTypes from './ActionTypes';
 
 export const Hearts = (state = HEARTS, action) => {
     switch (action.type) {
-        // case ActionTypes.ADD_HEART:
-        //     debugger
-        //     const heart = {hello: 1};
-        //     heart.id = state.length;
-        //     heart.wishid = action.payload.wishid;
-        //     heart.heartsval = 0;
-        //     return state.concat(heart);
         case ActionTypes.ADD_WISH:
             const heart = {};
             heart.id = state.length;

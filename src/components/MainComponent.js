@@ -6,7 +6,7 @@ import SingleWish from './SingleWishComponent';
 import MakeAWish from './MakeAWishComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addWish, addHeart, plusHeart } from '../redux/ActionCreators';
+import { addWish, plusHeart } from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
     return {
