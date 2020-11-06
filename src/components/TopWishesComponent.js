@@ -5,8 +5,8 @@ import ButtonWish from './ButtonWishComponent'
 
 
 function CompareHearts(a, b) {
-    const thingA = a.hearts;
-    const thingB = b.hearts;
+    const thingA = a.heartsValOnWish;
+    const thingB = b.heartsValOnWish;
 
     let comparison = 0;
     if (thingA > thingB) {
@@ -22,7 +22,13 @@ function TopWishes({ wishes, hearts, plusHeart }) {
     // const filteredWishes = wishes.filter(wish => wish.hearts > 50);
     // let sortedWishes = filteredWishes.sort(CompareHearts);
 
-    let sortedWishes = wishes.sort(CompareHearts);
+    let wishesCopy = wishes;
+    // wishesCopy.map(wish => console.log(wish.id))
+    // wishesCopy.map(wish => wish.newprop=12)
+    wishesCopy.map(wish => (wish.heartsValOnWish = (hearts.filter(heartval => heartval.wishid === wish.id)[0].heartsval)))
+    // let thisHeartsVal = hearts.filter(heartval => heartval.wishid === 1)[0].heartsval;
+
+    let sortedWishes = wishesCopy.sort(CompareHearts);
 
 
     return (

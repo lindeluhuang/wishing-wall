@@ -22,17 +22,6 @@ const mapDispatchToProps = {
 
 class Main extends Component {
 
-    // setNewWish = (newVal) => {
-    //     console.log(newVal);
-    //     this.setState({ wishes: [...this.props.wishes, newVal] })
-    // }
-
-    // addHeart = (wishToUpdate) => {
-    //     console.log(wishToUpdate);
-    //     let updatedWishes = this.props.wishes.map(wish => [wishToUpdate].find(o => o.id === wish.id) || wish);
-    //     this.setState({ wishes: updatedWishes })
-    // }
-
     render() {
 
         const wishWithId = ({ match }) => {
@@ -45,7 +34,6 @@ class Main extends Component {
                 />
             );
         };
-
 
         return (
             <div>

@@ -7,7 +7,7 @@ export const HEARTS = [
     {
         id: 1,
         wishid: 1,
-        heartsval: 46
+        heartsval: 14
     },
 
     {
@@ -43,12 +43,12 @@ export const HEARTS = [
     {
         id: 8,
         wishid: 8,
-        heartsval: 24
+        heartsval: 16
     },
     {
         id: 9,
         wishid: 9,
-        heartsval: 63
+        heartsval: 17
     },
     {
         id: 10,
