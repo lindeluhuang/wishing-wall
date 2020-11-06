@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/wishing-wall/static/css/main.a20e5437.chunk.css",
-    "main.js": "/wishing-wall/static/js/main.52b4a1da.chunk.js",
-    "main.js.map": "/wishing-wall/static/js/main.52b4a1da.chunk.js.map",
-    "runtime-main.js": "/wishing-wall/static/js/runtime-main.16dad989.js",
-    "runtime-main.js.map": "/wishing-wall/static/js/runtime-main.16dad989.js.map",
+    "main.css": "/wishing-wall/static/css/main.881b3221.chunk.css",
+    "main.js": "/wishing-wall/static/js/main.89299aa7.chunk.js",
+    "main.js.map": "/wishing-wall/static/js/main.89299aa7.chunk.js.map",
+    "runtime-main.js": "/wishing-wall/static/js/runtime-main.1a6a1dce.js",
+    "runtime-main.js.map": "/wishing-wall/static/js/runtime-main.1a6a1dce.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/wishing-wall/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.463b6e18.chunk.js": "/wishing-wall/static/js/2.463b6e18.chunk.js",
-    "static/js/2.463b6e18.chunk.js.map": "/wishing-wall/static/js/2.463b6e18.chunk.js.map",
-    "static/js/3.323ef135.chunk.js": "/wishing-wall/static/js/3.323ef135.chunk.js",
-    "static/js/3.323ef135.chunk.js.map": "/wishing-wall/static/js/3.323ef135.chunk.js.map",
+    "static/js/2.2ceae0ca.chunk.js": "/wishing-wall/static/js/2.2ceae0ca.chunk.js",
+    "static/js/2.2ceae0ca.chunk.js.map": "/wishing-wall/static/js/2.2ceae0ca.chunk.js.map",
+    "static/js/3.f1eb3313.chunk.js": "/wishing-wall/static/js/3.f1eb3313.chunk.js",
+    "static/js/3.f1eb3313.chunk.js.map": "/wishing-wall/static/js/3.f1eb3313.chunk.js.map",
     "index.html": "/wishing-wall/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/wishing-wall/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.a20e5437.chunk.css.map": "/wishing-wall/static/css/main.a20e5437.chunk.css.map",
-    "static/js/2.463b6e18.chunk.js.LICENSE.txt": "/wishing-wall/static/js/2.463b6e18.chunk.js.LICENSE.txt",
+    "static/css/main.881b3221.chunk.css.map": "/wishing-wall/static/css/main.881b3221.chunk.css.map",
+    "static/js/2.2ceae0ca.chunk.js.LICENSE.txt": "/wishing-wall/static/js/2.2ceae0ca.chunk.js.LICENSE.txt",
     "static/media/App.css": "/wishing-wall/static/media/Background.363bc23e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.16dad989.js",
+    "static/js/runtime-main.1a6a1dce.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.463b6e18.chunk.js",
-    "static/css/main.a20e5437.chunk.css",
-    "static/js/main.52b4a1da.chunk.js"
+    "static/js/2.2ceae0ca.chunk.js",
+    "static/css/main.881b3221.chunk.css",
+    "static/js/main.89299aa7.chunk.js"
   ]
 }
