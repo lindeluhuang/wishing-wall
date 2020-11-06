@@ -22,7 +22,7 @@ export const Wishes = (state = WISHES, action) => {
     let year = d.getFullYear().toString().substr(-2);
 
     debugger
-            wish.datetime = d.toISOString();
+            wish.datetime = d;
             wish.datedisplay = month + ' `' + year;
             return state.concat(wish);
         default:
