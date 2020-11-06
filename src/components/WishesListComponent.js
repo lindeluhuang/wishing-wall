@@ -40,7 +40,7 @@ function WishesList({ wishes, hearts, plusHeart }) {
         return (
             <div key={wish.id} >
                 <Fade >
-                <RenderWishItem wish={wish} hearts={hearts} plusHeart={plusHeart} />
+                    <RenderWishItem wish={wish} hearts={hearts} plusHeart={plusHeart} />
                 </Fade>
             </div>
         );

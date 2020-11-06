@@ -6,37 +6,42 @@ import {
     CardTitle, CardSubtitle
 } from 'reactstrap';
 import heartIcon from '../images/Heart.png';
-import { Slide, Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
+
+function RenderSingleWish({ wish, hearts, plusHeart }) {
+
+    function handleClick(e) {
+        e.preventDefault();
+        plusHeart(wish.id);
+    }
+
+    let heartsToDisplay = hearts.filter(heartval => heartval.wishid === wish.id)[0].heartsval;
+
+    return (
+        <Card>
+            <CardBody>
+                <CardTitle className="single-wish-title">{wish.content}</CardTitle>
+                <CardSubtitle><img
+                    src={heartIcon}
+                    class="heart-icon"
+                    onClick={handleClick}
+                />{heartsToDisplay} hearts • {wish.datedisplay}</CardSubtitle>
+            </CardBody>
+        </Card>
+    );
+}
 
 
 function SingleWish(props) {
 
-    function handleClick(e) {
-        e.preventDefault();
-        props.plusHeart(props.wish.id);
-      }
-
-      let heartsToDisplay = props.hearts.filter(heartval => heartval.wishid === props.wish.id)[0].heartsval;
-
     return (
         <React.Fragment>
-            {/* <Slide triggerOnce direction="down"> */}
-            <Fade triggerOnce>
-            <SecondaryHeader title="A single wish" history={useHistory()} />
-            <div className="container single-wish">
-                <Card>
-                    <CardBody>
-                        <CardTitle className="single-wish-title">{props.wish.content}</CardTitle>
-                        <CardSubtitle><img
-                            src={heartIcon}
-                            class="heart-icon"
-                            onClick={handleClick}
-                        />{heartsToDisplay} hearts • {props.wish.datedisplay}</CardSubtitle>
-                    </CardBody>
-                </Card>
-            </div>
+            <Fade >
+                <SecondaryHeader title="A single wish" history={useHistory()} />
+                <div className="container single-wish">
+                    <RenderSingleWish wish={props.wish} hearts={props.hearts} plusHeart={props.plusHeart} />
+                </div>
             </Fade>
-            {/* </Slide> */}
         </React.Fragment>
     );
 }
