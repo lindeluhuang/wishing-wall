@@ -62,7 +62,7 @@ class WriteWish extends Component {
         event.preventDefault();
 
         if (!this.validate(this.state.wish).wish && this.state.wish.length) {
-        this.props.setNewWish(newWishObj);
+        // this.props.setNewWish(newWishObj);
         this.props.history.goBack()
     }
 

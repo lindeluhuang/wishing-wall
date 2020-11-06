@@ -17,7 +17,7 @@ function CompareHearts(a, b) {
     return comparison;
 }
 
-function TopWishes({ wishes, addHeart }) {
+function TopWishes({ wishes }) {
 
     // const filteredWishes = wishes.filter(wish => wish.hearts > 50);
     // let sortedWishes = filteredWishes.sort(CompareHearts);
@@ -28,7 +28,7 @@ function TopWishes({ wishes, addHeart }) {
     return (
         <React.Fragment>
             <PrimaryHeader />
-            <WishesList wishes={sortedWishes} addHeart={addHeart}/>
+            <WishesList wishes={sortedWishes} />
             <ButtonWish />
         </React.Fragment>
     );

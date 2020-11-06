@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 import heartIcon from '../images/Heart.png';
 
 
-function RenderWishItem({ wish, addHeart }) {
+function RenderWishItem({ wish }) {
 
     function handleClick(e) {
         e.preventDefault();
         wish.hearts++;
-        addHeart(wish)
+
       }
 
     return (
@@ -33,12 +33,12 @@ function RenderWishItem({ wish, addHeart }) {
 }
 
 
-function WishesList({ wishes, addHeart }) {
+function WishesList({ wishes }) {
 
     const getWishes = wishes.map( wish => {
         return (
             <div key={wish.id} >
-                <RenderWishItem wish={wish} addHeart={addHeart}/>
+                <RenderWishItem wish={wish} />
             </div>
         );
     });

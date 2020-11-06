@@ -24,7 +24,7 @@ import ButtonWish from './ButtonWishComponent'
 
 
 
-function ShuffledWishes({ wishes, addHeart }) {
+function ShuffledWishes({ wishes, }) {
 
     let shuffleWishes = wishes.sort( () => Math.random() - 0.5);
     // let shuffleWishes = shuffle({wishes}); 
@@ -32,7 +32,7 @@ function ShuffledWishes({ wishes, addHeart }) {
     return (
         <React.Fragment>
             <PrimaryHeader />
-            <WishesList wishes={shuffleWishes} addHeart={addHeart}/>
+            <WishesList wishes={shuffleWishes} />
             <ButtonWish />
         </React.Fragment>
     );

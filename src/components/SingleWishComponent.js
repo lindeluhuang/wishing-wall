@@ -13,7 +13,6 @@ function SingleWish(props) {
     function handleClick(e) {
         e.preventDefault();
         props.wish.hearts++;
-        props.addHeart(props.wish)
       }
 
     return (
