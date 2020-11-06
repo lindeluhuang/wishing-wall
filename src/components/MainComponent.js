@@ -8,6 +8,7 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addWish, plusHeart } from '../redux/ActionCreators';
 
+
 const mapStateToProps = state => {
     return {
         wishes: state.wishes,

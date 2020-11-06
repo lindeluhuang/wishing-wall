@@ -3,7 +3,6 @@ import PrimaryHeader from './PrimaryHeaderComponent'
 import WishesList from './WishesListComponent'
 import ButtonWish from './ButtonWishComponent'
 
-
 function CompareHearts(a, b) {
     const thingA = a.heartsValOnWish;
     const thingB = b.heartsValOnWish;
@@ -27,7 +26,7 @@ function TopWishes({ wishes, hearts, plusHeart }) {
     return (
         <React.Fragment>
             <PrimaryHeader />
-            <WishesList wishes={sortedWishes} hearts={hearts} plusHeart={plusHeart} />
+                <WishesList wishes={sortedWishes} hearts={hearts} plusHeart={plusHeart} />
             <ButtonWish />
         </React.Fragment>
     );

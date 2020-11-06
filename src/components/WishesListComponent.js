@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import heartIcon from '../images/Heart.png';
+import { Fade } from "react-awesome-reveal";
 
 
 function RenderWishItem({ wish, hearts, plusHeart }) {
@@ -38,7 +39,9 @@ function WishesList({ wishes, hearts, plusHeart }) {
     const getWishes = wishes.map(wish => {
         return (
             <div key={wish.id} >
+                <Fade cascade>
                 <RenderWishItem wish={wish} hearts={hearts} plusHeart={plusHeart} />
+                </Fade>
             </div>
         );
     });
