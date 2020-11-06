@@ -12,7 +12,7 @@ function SingleWish(props) {
 
     function handleClick(e) {
         e.preventDefault();
-        props.wish.hearts++;
+        props.plusHeart(props.wish.id);
       }
 
       let heartsToDisplay = props.hearts.filter(heartval => heartval.wishid === props.wish.id)[0].heartsval;

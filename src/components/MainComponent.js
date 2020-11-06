@@ -41,7 +41,7 @@ class Main extends Component {
                     wish={this.props.wishes.filter(wish => wish.id === +match.params.wishId)[0]} 
                     wishes={this.props.wishes} 
                     hearts={this.props.hearts}
-                    
+                    plusHeart={this.props.plusHeart}
                 />
             );
         };
