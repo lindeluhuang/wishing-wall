@@ -192,7 +192,17 @@ textarea:focus {
   padding-bottom: 3px;
   margin-right: 6px;
   cursor: pointer;
+
 }
+
+.heart-icon:active {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+
+
+
 
 /* ------------------------ Single wish cards ------------------------ */
 
