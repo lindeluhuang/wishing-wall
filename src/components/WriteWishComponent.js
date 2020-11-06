@@ -36,6 +36,7 @@ class WriteWish extends Component {
                                 <Control.textarea model=".wish" id="wish" name="wish"
                                     className="form-control"
                                     placeholder="I wish..."
+                                    autoFocus
                                     validators={{
                                         required, 
                                         minLength: minLength(10)
