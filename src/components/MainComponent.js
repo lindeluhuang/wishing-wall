@@ -6,6 +6,7 @@ import SingleWish from './SingleWishComponent';
 import MakeAWish from './MakeAWishComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addWish } from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
     return {
@@ -14,10 +15,11 @@ const mapStateToProps = state => {
     };
 };
 
+const mapDispatchToProps = {
+    addWish: (content) => (addWish(content))
+};
+
 class Main extends Component {
-
-    
-
 
     // setNewWish = (newVal) => {
     //     console.log(newVal);
@@ -47,16 +49,16 @@ class Main extends Component {
         return (
             <div>
                 <Switch>
-                    <Route path='/allwishes' render={() => <AllWishes wishes={this.props.wishes} hearts={this.props.hearts} />} />
-                    <Route path='/topwishes' render={() => <TopWishes wishes={this.props.wishes} hearts={this.props.hearts} />} />
-                    <Route path='/shuffledwishes' render={() => <ShuffledWishes wishes={this.props.wishes} hearts={this.props.hearts} />} />
+                    <Route path='/allwishes' render={() => <AllWishes wishes={this.props.wishes} hearts={this.props.hearts} addWish={this.props.addWish} />} />
+                    <Route path='/topwishes' render={() => <TopWishes wishes={this.props.wishes} hearts={this.props.hearts} addWish={this.props.addWish} />} />
+                    <Route path='/shuffledwishes' render={() => <ShuffledWishes wishes={this.props.wishes} hearts={this.props.hearts} addWish={this.props.addWish} />} />
                     <Route path='/wish/:wishId' component={wishWithId} />
-                    <Route path='/makeawish' render={() => <MakeAWish setNewWish={this.setNewWish} />} />
-                    <Redirect to='/allwishes' render={() => <AllWishes wishes={this.props.wishes} hearts={this.props.hearts} />} />
+                    <Route path='/makeawish' render={() => <MakeAWish setNewWish={this.setNewWish} addWish={this.props.addWish}/>} />
+                    <Redirect to='/allwishes' render={() => <AllWishes wishes={this.props.wishes} hearts={this.props.hearts} addWish={this.props.addWish} />} />
                 </Switch>
             </div>
         );
     };
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));

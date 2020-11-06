@@ -15,7 +15,7 @@ function RenderWishItem({ wish, hearts }) {
 
     }
 
-    let heartsToDisplay = hearts.filter(heartval => heartval.wishid === wish.id)[0].heartsval;
+    // let heartsToDisplay = hearts.filter(heartval => heartval.wishid === wish.id)[0].heartsval;
 
 
     return (
@@ -29,7 +29,7 @@ function RenderWishItem({ wish, hearts }) {
                     class="heart-icon"
                     onClick={handleClick}
                 />
-                    {heartsToDisplay} hearts • {wish.datedisplay}</CardSubtitle>
+                    {} hearts • {wish.datedisplay}</CardSubtitle>
             </CardBody>
         </Card>
     );

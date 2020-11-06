@@ -8,12 +8,12 @@ import {
 } from 'reactstrap';
 
 
-function MakeAWish({ setNewWish }) {
+function MakeAWish({ setNewWish, addWish }) {
     return (
         <React.Fragment>
             <SecondaryHeader title="Make a wish" history={useHistory()} />
             <div className="container single-wish">
-                <WriteWish setNewWish={setNewWish} history={useHistory()}/>
+                <WriteWish setNewWish={setNewWish} addWish={addWish} history={useHistory()}/>
             </div>
         </React.Fragment>
     );

@@ -23,38 +23,10 @@ class WriteWish extends Component {
 
 
     handleSubmit(values) {
-        console.log("Current state is: " + JSON.stringify(values));
-        alert("Current state is: " + JSON.stringify(values));
+        this.props.addWish(values.wish);
+        this.props.history.goBack()
+        
     }
-    // handleSubmit(event) {
-    // // alert('Current state is: ' + JSON.stringify(this.state));
-    // const newWishObj = {
-    //     id: Math.floor(Math.random() * Math.floor(99999)),
-    //     content: this.state.wish,
-    //     datedisplay: this.setDateDisplay(),
-    //     datetime: this.setDateTime(),
-    //     hearts: 0
-    // }
-    // event.preventDefault();
-
-    // if (!this.validate(this.state.wish).wish && this.state.wish.length) {
-    // // this.props.setNewWish(newWishObj);
-    // this.props.history.goBack()
-    // }
-    // }
-
-    // setDateTime() {
-    //     var d = new Date();
-    //     return d;
-    // }
-
-    // setDateDisplay() {
-    //     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    //     var d = new Date();
-    //     var month = months[d.getMonth()];
-    //     var year = d.getFullYear().toString().substr(-2);
-    //     return (month + ' `' + year)
-    // }
 
     render() {
 
@@ -69,7 +41,7 @@ class WriteWish extends Component {
                                     placeholder="I wish..."
                                     validators={{
                                         required, 
-                                        minLength: minLength(10),
+                                        minLength: minLength(10)
                                     }}
                                 />
                                 <Errors
