@@ -7,16 +7,14 @@ import { Link } from 'react-router-dom';
 import heartIcon from '../images/Heart.png';
 
 
-function RenderWishItem({ wish, hearts }) {
+function RenderWishItem({ wish, hearts, plusHeart }) {
 
     function handleClick(e) {
         e.preventDefault();
-        wish.hearts++;
-
+        plusHeart(wish.id);
     }
 
     let heartsToDisplay = hearts.filter(heartval => heartval.wishid === wish.id)[0].heartsval;
-
 
     return (
         <Card className="wishItem">
@@ -36,11 +34,11 @@ function RenderWishItem({ wish, hearts }) {
 }
 
 
-function WishesList({ wishes, hearts }) {
+function WishesList({ wishes, hearts, plusHeart }) {
     const getWishes = wishes.map(wish => {
         return (
             <div key={wish.id} >
-                <RenderWishItem wish={wish} hearts={hearts} />
+                <RenderWishItem wish={wish} hearts={hearts} plusHeart={plusHeart} />
                 {/* <RenderWishItem wish={wish} heartsval={hearts.filter(heartval => heartval.wishid === wish.id)} /> */}
             </div>
         );

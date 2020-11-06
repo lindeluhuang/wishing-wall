@@ -25,7 +25,6 @@ class WriteWish extends Component {
     handleSubmit(values) {
         this.props.addWish(values.wish);
         this.props.history.goBack()
-        
     }
 
     render() {

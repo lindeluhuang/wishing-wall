@@ -6,7 +6,7 @@ export const ConfigureStore = () => {
     const store = createStore(
         combineReducers({
             wishes: Wishes,
-            hearts: Hearts,
+            hearts: Hearts
         })
     );
 
