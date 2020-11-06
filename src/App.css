@@ -157,6 +157,10 @@ textarea:focus {
   /* font-weight: 700; */
 /* } */
 
+.card-columns {
+  padding-bottom:10em;
+}
+
 
 @media (min-width: 34em) {
   .card-columns {

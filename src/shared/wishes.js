@@ -34,13 +34,13 @@ export const WISHES = [
         id: 5,
         content: "I wish I could live in a log cabin, high up in the mountains where I could see all the stars at night.",
         datedisplay: "Sep '20",
-        datetime: 2010
+        datetime: 2009
     },
     {
         id: 6,
         content: "I wish I had a dragon with diamond-studded scales, with claws like silver sabers, and fangs like silver nails, a dragon fierce and faithful, always ready by my side, a dragon to defend me or take me for a ride. I wish I had a dragon with eyes of shining gold, who breathed a plume of fire whenever it was told, a dragon so frocious it might frighten Frankenstein, but not a lazy dragon who sleeps all day...like mine!",
         datedisplay: "Sep '20",
-        datetime: 2010
+        datetime: 2009
     },
     {
         id: 7,
