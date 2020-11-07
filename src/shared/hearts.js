@@ -2,13 +2,13 @@ export const HEARTS = [
     {
         id: 0,
         wishid: 0,
-        heartsval: 49,
+        heartsval: 48,
         lastheart: "Nov 1, 2020"
     },
     {
         id: 1,
         wishid: 1,
-        heartsval: 14,
+        heartsval: 36,
         lastheart: "Nov 2, 2020"
     },
 
@@ -33,25 +33,25 @@ export const HEARTS = [
     {
         id: 5,
         wishid: 5,
-        heartsval: 39,
+        heartsval: 10,
         lastheart: "Nov 2, 2020"
     },
     {
         id: 6,
         wishid: 6,
-        heartsval: 12,
+        heartsval: 2,
         lastheart: "Nov 3, 2020"
     },
     {
         id: 7,
         wishid: 7,
-        heartsval: 75,
+        heartsval: 8,
         lastheart: "Nov 4, 2020"
     },
     {
         id: 8,
         wishid: 8,
-        heartsval: 16,
+        heartsval: 21,
         lastheart: "Nov 5, 2020"
     },
     {
