@@ -6,6 +6,7 @@ import {
 import { Link } from 'react-router-dom';
 import heartIcon from '../images/Heart.png';
 import { Fade } from "react-awesome-reveal";
+import { Loading } from './LoadingComponent';
 
 
 function RenderWishItem({ wish, hearts, plusHeart }) {
@@ -35,7 +36,7 @@ function RenderWishItem({ wish, hearts, plusHeart }) {
 }
 
 
-function WishesList({ wishes, hearts, plusHeart }) {
+function WishesList({ wishes, hearts, plusHeart, isLoading, errMess }) {
     const getWishes = wishes.map(wish => {
         return (
             <div key={wish.id} >
@@ -46,13 +47,34 @@ function WishesList({ wishes, hearts, plusHeart }) {
         );
     });
 
-    return (
-        <div className="container">
-            <div className="card-columns">
-                {getWishes}
+    if (isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
+    if (errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h4>{errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        );
+    } if (wishes) {
+        return (
+            <div className="container">
+                <div className="card-columns">
+                    {getWishes}
+                </div>
+            </div>
+        );
+    }
 }
 
 export default WishesList;
