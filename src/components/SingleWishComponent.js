@@ -17,7 +17,6 @@ function RenderSingleWish({ wish, hearts, plusHeart }) {
 
     let heartObj = hearts.filter(heartval => heartval.wishid === wish.id)[0]
     let heartsToDisplay = heartObj.heartsval;
-    debugger
     let heartsLastDate = heartObj.lastheart;
 
     return (

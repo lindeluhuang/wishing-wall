@@ -14,6 +14,12 @@ export const Hearts = (state = HEARTS, action) => {
             let newState = [...state];
             const heartsid = newState.filter(heart => heart.wishid === wishid)[0].id;
             newState[heartsid].heartsval++;
+            let d = new Date();
+            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            let month = months[d.getMonth()];
+            let date = d.getDate();
+            let year = d.getFullYear();
+            newState[heartsid].lastheart = `${month} ${date}, ${year}`;
             return newState;
         default:
             return state;
