@@ -7,7 +7,7 @@ export const WISHES = [
     },
     {
         id: 1,
-        content: "I wish I knew then what I know now.",
+        content: "I wish I could tell my older self that that nagging thorn in my side didn’t really matter in the grand scheme of things. It all turns out okay in the end.",
         datedisplay: "Oct '20",
         datetime: 2010
     },
@@ -20,13 +20,13 @@ export const WISHES = [
     },
     {
         id: 3,
-        content: "I wish you knew you weren't alone in this great big scary world.",
+        content: "I wish I had just a little bit more time. ",
         datedisplay: "Sep '20",
         datetime: 2009
     },
     {
         id: 4,
-        content: "I wish we lived in a candy world where stuff was made out of candy.",
+        content: "I wish I could find a resting place. ",
         datedisplay: "Aug '20",
         datetime: 2008
     },
@@ -62,7 +62,7 @@ export const WISHES = [
     },
     {
         id: 10,
-        content: "I wish I could soar high in the sky.",
+        content: "I wish I could soar high in the sky, like an eagle keeping eye over lands near and far.",
         datedisplay: "Oct '20",
         datetime: 2010
     },

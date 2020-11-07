@@ -149,6 +149,8 @@ textarea:focus {
 
 .card-subtitle {
   font-size: 16px;
+  padding-top: 0.6em;
+  line-height: 2em;
   color: var(--text-grey-color);;
 }
 

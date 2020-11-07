@@ -15,7 +15,10 @@ function RenderSingleWish({ wish, hearts, plusHeart }) {
         plusHeart(wish.id);
     }
 
-    let heartsToDisplay = hearts.filter(heartval => heartval.wishid === wish.id)[0].heartsval;
+    let heartObj = hearts.filter(heartval => heartval.wishid === wish.id)[0]
+    let heartsToDisplay = heartObj.heartsval;
+    debugger
+    let heartsLastDate = heartObj.lastheart;
 
     return (
         <Card>
@@ -25,7 +28,10 @@ function RenderSingleWish({ wish, hearts, plusHeart }) {
                     src={heartIcon}
                     class="heart-icon"
                     onClick={handleClick}
-                />{heartsToDisplay} hearts • {wish.datedisplay}</CardSubtitle>
+                />{heartsToDisplay} hearts • {wish.datedisplay}<br></br>
+                <em>Last heart on {heartsLastDate}</em>
+
+                </CardSubtitle>
             </CardBody>
         </Card>
     );
