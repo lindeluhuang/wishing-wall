@@ -76,8 +76,6 @@ class Main extends Component {
                     />
                     <Route path='/wish/:wishId' component={wishWithId} />
                     <Route path='/makeawish' render={() => <MakeAWish
-                        setNewWish={this.setNewWish}
-                        addWish={this.props.addWish}
                         resetWishesForm={this.props.resetWishesForm}
                     />}
                     />

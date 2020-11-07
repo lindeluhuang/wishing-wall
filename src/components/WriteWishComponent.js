@@ -1,26 +1,36 @@
 import React, { Component } from 'react';
 import { Button, Col, Row } from 'reactstrap';
 import { Control, Form, Errors } from 'react-redux-form';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { addWish, addHeart } from '../redux/ActionCreators';
 
 const required = val => val && val.length;
 const minLength = len => val => val && (val.length >= len);
+
+const mapStateToProps = state => {
+    return {
+        wishes: state.wishes,
+    };
+};
+
+const mapDispatchToProps = {
+    addWish: (content, id) => (addWish(content, id)),
+    addHeart: (wishid) => (addHeart(wishid))
+};
+
 
 class WriteWish extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            wish: '',
-            touched: {
-                wish: false
-            }
-        };
-
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(values) {
-        this.props.addWish(values.wish);
+        const wishid = this.props.wishes.length;
+        this.props.addWish(values.wish, wishid);
+        this.props.addHeart(wishid);
         this.props.resetWishesForm();
         this.props.history.goBack()
     }
@@ -66,4 +76,4 @@ class WriteWish extends Component {
     }
 }
 
-export default WriteWish;
+export default connect(mapStateToProps, mapDispatchToProps)(WriteWish);

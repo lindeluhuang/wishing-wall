@@ -3,10 +3,10 @@ import * as ActionTypes from './ActionTypes';
 
 export const Hearts = (state = HEARTS, action) => {
     switch (action.type) {
-        case ActionTypes.ADD_WISH:
+        case ActionTypes.ADD_HEART:
             const heart = {};
             heart.id = state.length;
-            heart.wishid = state.length;
+            heart.wishid = action.payload.wishid;
             heart.heartsval = 0;
             return state.concat(heart);
         case ActionTypes.PLUS_HEART:
