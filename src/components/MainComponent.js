@@ -17,14 +17,14 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     addWish: (content) => (addWish(content)),
     plusHeart: (wishid) => (plusHeart(wishid)),
-    fetchWishes: () => (fetchWishes())
+    // fetchWishes: () => (fetchWishes())
 };
 
 class Main extends Component {
 
-    componentDidMount() {
-        this.props.fetchWishes();
-    }
+    // componentDidMount() {
+    //     this.props.fetchWishes();
+    // }
 
     render() {
 
