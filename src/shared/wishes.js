@@ -44,7 +44,7 @@ export const WISHES = [
     },
     {
         id: 7,
-        content: "I wish that I could mail some snow inside a box addressed to you so you could have your own snowman with button eyes the way I do and you coul sled and build a fort. With snow there's so much you can make. I wish that I could mail some snow so you could taste a sweet snowflake.",
+        content: "I wish that I could mail some snow inside a box addressed to you so you could have your own snowman with button eyes the way I do and you could sled and build a fort. With snow there's so much you can make. I wish that I could mail some snow so you could taste a sweet snowflake.",
         datedisplay: "Aug '20",
         datetime: 2008
     },
