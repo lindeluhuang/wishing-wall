@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Col, Row } from 'reactstrap';
-import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Control, Form, Errors } from 'react-redux-form';
 
 const required = val => val && val.length;
 const minLength = len => val => val && (val.length >= len);
@@ -19,9 +19,9 @@ class WriteWish extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-
     handleSubmit(values) {
         this.props.addWish(values.wish);
+        this.props.resetWishesForm();
         this.props.history.goBack()
     }
 
@@ -30,7 +30,7 @@ class WriteWish extends Component {
         return (
             <div className="row row-content">
                 <div className="col">
-                    <LocalForm onSubmit={values => this.handleSubmit(values)}>
+                    <Form model="wishesForm" onSubmit={values => this.handleSubmit(values)}>
                         <Row className="form-group">
                             <Col>
                                 <Control.textarea model=".wish" id="wish" name="wish"
@@ -38,20 +38,20 @@ class WriteWish extends Component {
                                     placeholder="I wish..."
                                     autoFocus
                                     validators={{
-                                        required, 
+                                        required,
                                         minLength: minLength(10)
                                     }}
                                 />
                                 <Errors
-                                        className="text-danger"
-                                        model=".wish"
-                                        show="touched"
-                                        component="div"
-                                        messages={{
-                                            required: 'Your wish awaits...',
-                                            minLength: 'Write just a bit more to fully realize your wish.',
-                                        }}
-                                    />
+                                    className="text-danger"
+                                    model=".wish"
+                                    show="touched"
+                                    component="div"
+                                    messages={{
+                                        required: 'Your wish awaits...',
+                                        minLength: 'Write just a bit more to fully realize your wish.',
+                                    }}
+                                />
                             </Col>
                         </Row>
                         <Row className="form-group">
@@ -59,7 +59,7 @@ class WriteWish extends Component {
                                 <Button outline type="submit" className="btn-release-wish">Release Your Wish</Button>
                             </Col>
                         </Row>
-                    </LocalForm>
+                    </Form>
                 </div>
             </div>
         );

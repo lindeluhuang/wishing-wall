@@ -1,12 +1,12 @@
 import * as ActionTypes from './ActionTypes';
 import { WISHES } from '../shared/wishes';
 
-export const Wishes = (state = {
-    // isLoading: true,
-    // errMess: null,
-    // wishes: [],
-    wishes: WISHES
-}, action) => {
+// export const Wishes = (state = {
+// isLoading: true,
+// errMess: null,
+// wishes: [],
+// }, action) => {
+export const Wishes = (state = WISHES, action) => {
     switch (action.type) {
         // case ActionTypes.SHOW_WISHES:
         //     return {...state, isLoading: false, errMess: null, wishes: action.payload};
