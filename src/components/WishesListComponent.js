@@ -24,11 +24,12 @@ function RenderWishItem({ wish, hearts, plusHeart }) {
                 <Link to={`/wish/${wish.id}`}>
                     <CardTitle>{wish.content}</CardTitle>
                 </Link>
-                <CardSubtitle><img
-                    src={heartIcon}
-                    class="heart-icon"
-                    onClick={handleClick}
-                />
+                <CardSubtitle>
+                    <img
+                        src={heartIcon}
+                        className="heart-icon"
+                        onClick={handleClick}
+                    />
                     {heartsToDisplay} hearts • {wish.datedisplay}</CardSubtitle>
             </CardBody>
         </Card>
