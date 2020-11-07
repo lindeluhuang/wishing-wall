@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import AllWishes from './AllWishesComponent';
-import TopWishes from './TopWishesComponent';
-import ShuffledWishes from './ShuffledWishesComponent';
+import WishWall from './WishWallComponent';
 import SingleWish from './SingleWishComponent';
 import MakeAWish from './MakeAWishComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -28,8 +26,8 @@ class Main extends Component {
         const wishWithId = ({ match }) => {
             return (
                 <SingleWish
-                    wish={this.props.wishes.filter(wish => wish.id === +match.params.wishId)[0]} 
-                    wishes={this.props.wishes} 
+                    wish={this.props.wishes.filter(wish => wish.id === +match.params.wishId)[0]}
+                    wishes={this.props.wishes}
                     hearts={this.props.hearts}
                     plusHeart={this.props.plusHeart}
                 />
@@ -39,12 +37,40 @@ class Main extends Component {
         return (
             <div>
                 <Switch>
-                    <Route path='/allwishes' render={() => <AllWishes wishes={this.props.wishes} hearts={this.props.hearts} plusHeart={this.props.plusHeart} />} />
-                    <Route path='/topwishes' render={() => <TopWishes wishes={this.props.wishes} hearts={this.props.hearts} plusHeart={this.props.plusHeart} />} />
-                    <Route path='/shuffledwishes' render={() => <ShuffledWishes wishes={this.props.wishes} hearts={this.props.hearts} plusHeart={this.props.plusHeart} />} />
+                    <Route path='/allwishes' render={() => <WishWall
+                        wishes={this.props.wishes}
+                        hearts={this.props.hearts}
+                        plusHeart={this.props.plusHeart}
+                        tab="all"
+                    />}
+                    />
+                    <Route path='/topwishes' render={() => <WishWall
+                        wishes={this.props.wishes}
+                        hearts={this.props.hearts}
+                        plusHeart={this.props.plusHeart}
+                        tab="top"
+                    />}
+                    />
+                    <Route path='/shuffledwishes' render={() => <WishWall
+                        wishes={this.props.wishes}
+                        hearts={this.props.hearts}
+                        plusHeart={this.props.plusHeart}
+                        tab="shuffled"
+                    />}
+                    />
                     <Route path='/wish/:wishId' component={wishWithId} />
-                    <Route path='/makeawish' render={() => <MakeAWish setNewWish={this.setNewWish} addWish={this.props.addWish} />} />
-                    <Redirect to='/allwishes' render={() => <AllWishes wishes={this.props.wishes} hearts={this.props.hearts} plusHeart={this.props.plusHeart} />} />
+                    <Route path='/makeawish' render={() => <MakeAWish
+                        setNewWish={this.setNewWish}
+                        addWish={this.props.addWish}
+                    />}
+                    />
+                    <Redirect to='/allwishes' render={() => <WishWall
+                        wishes={this.props.wishes}
+                        hearts={this.props.hearts}
+                        plusHeart={this.props.plusHeart}
+                        tab="all"
+                    />}
+                    />
                 </Switch>
             </div>
         );
