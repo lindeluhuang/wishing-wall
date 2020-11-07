@@ -21,11 +21,6 @@ const mapDispatchToProps = {
 
 
 class WriteWish extends Component {
-    constructor(props) {
-        super(props);
-
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
 
     handleSubmit(values) {
         const wishid = this.props.wishes.length;
