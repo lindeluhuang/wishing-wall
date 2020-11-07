@@ -16,7 +16,6 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-    addWish: (content) => (addWish(content)),
     plusHeart: (wishid) => (plusHeart(wishid)),
     // fetchWishes: () => (fetchWishes())
     resetWishesForm: () => (actions.reset('wishesForm'))
