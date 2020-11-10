@@ -1,43 +1,24 @@
 import React from 'react';
 import SecondaryHeader from './SecondaryHeaderComponent'
+import WishSubtitle from './WishSubtitleComponent'
 import { useHistory } from 'react-router-dom';
 import {
     Card, CardBody,
-    CardTitle, CardSubtitle
+    CardTitle
 } from 'reactstrap';
-import heartIcon from '../images/Heart.png';
+
 import { Fade } from "react-awesome-reveal";
 
-function RenderSingleWish({ wish, hearts, plusHeart }) {
-
-    function handleClick(e) {
-        e.preventDefault();
-        e.stopPropagation()
-        plusHeart(wish.id);
-    }
-
-    let heartObj = hearts.filter(heartval => heartval.wishid === wish.id)[0]
-    let heartsToDisplay = heartObj.heartsval;
-    let heartsLastDate = heartObj.lastheart;
+function RenderSingleWish({ wish }) {
     return (
         <Card>
             <CardBody>
                 <CardTitle className="single-wish-title">{wish.content}</CardTitle>
-                <CardSubtitle>
-                <img
-                        src={heartIcon}
-                        className="heart-icon"
-                        onClick={handleClick}
-                    />
-                {heartsToDisplay} hearts • {wish.datedisplay}<br></br>
-                <em>Last heart on {heartsLastDate}</em>
-
-                </CardSubtitle>
+                <WishSubtitle wish={wish} />
             </CardBody>
         </Card>
     );
 }
-
 
 function SingleWish(props) {
     return (
@@ -45,7 +26,7 @@ function SingleWish(props) {
             <Fade>
                 <SecondaryHeader title="A single wish" history={useHistory()} />
                 <div className="container single-wish">
-                    <RenderSingleWish wish={props.wish} hearts={props.hearts} plusHeart={props.plusHeart} />
+                    <RenderSingleWish wish={props.wish} />
                 </div>
             </Fade>
         </React.Fragment>
