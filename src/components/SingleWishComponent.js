@@ -23,8 +23,8 @@ function RenderSingleWish({ wish }) {
 function SingleWish(props) {
     return (
         <React.Fragment>
+            <SecondaryHeader title="A single wish" history={useHistory()} />
             <Fade>
-                <SecondaryHeader title="A single wish" history={useHistory()} />
                 <div className="container single-wish">
                     <RenderSingleWish wish={props.wish} />
                 </div>

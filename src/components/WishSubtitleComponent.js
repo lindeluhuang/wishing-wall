@@ -21,7 +21,6 @@ class WishSubtitle extends Component {
     render() {
         function handleClick(e, wishid, plusHeart) {
             e.preventDefault();
-            debugger
             plusHeart(wishid);
         }
 
