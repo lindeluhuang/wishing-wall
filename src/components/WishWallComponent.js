@@ -31,6 +31,7 @@ function CompareHearts(a, b) {
 }
 
 function WishWallComponent({ wishes, hearts, plusHeart, tab, wishesLoading, wishesErrMess }) {
+    console.log('wishwallcomponent')
     if (wishesLoading) {
         return <Loading />;
     }
