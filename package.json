@@ -1,7 +1,6 @@
 {
   "name": "wishing-wall",
-  // "homepage": "https://lindeluhuang.github.io/wishing-wall",
-  "homepage": "https://lindeluhuang.github.io/wishing-wall",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
